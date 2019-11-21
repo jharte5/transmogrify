@@ -27,6 +27,20 @@ const titleify = function(str) {
 }
 
 const crazify = function(str) {
+  let crazified = '';
+  let crazyI = 0;
+  for (const character of str) {
+    if (character === ' ') {
+      crazified += ' ';
+    } else {
+      crazified += crazyI % 2 === 1
+        ? character.toUpperCase()
+        : character.toLowerCase();
+      crazyI++;
+    }
+  }
+
+  return crazified;
   
 }
 
