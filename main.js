@@ -18,7 +18,12 @@ const reversify = function(str) {
 }
 
 const titleify = function(str) {
-  return str.split()
+  let titleCasedWords = [];
+  for (const word of str.split(' ')) {
+    titleCasedWords.push(word[0].toUpperCase() + word.slice(1).toLowerCase());
+  }
+
+  return titleCasedWords.join(' ');
 }
 
 const crazify = function(str) {
